@@ -122,7 +122,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <p className="text-sm text-muted-foreground">
-                      contact@example.com
+                      muhammadmahsanadil@gmail.com
                     </p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                     <h3 className="font-medium">Social Media</h3>
                     <div className="flex space-x-3 mt-1">
                       <a
-                        href="#"
+                        href="https://www.linkedin.com/in/muhammadahsanadil/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -167,7 +167,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                         </svg>
                       </a>
                       <a
-                        href="#"
+                        href="https://twitter.com/mahsanadil76401"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -185,7 +185,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                         </svg>
                       </a>
                       <a
-                        href="#"
+                        href="https://www.facebook.com/ahsanadil221/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -203,7 +203,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                         </svg>
                       </a>
                       <a
-                        href="#"
+                        href="https://www.instagram.com/ahsan_adil9/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -232,6 +232,36 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                     </div>
                   </div>
                 </div>
+                {/* <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Location</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Saudia Arabia, Damam, Pakistan, Karachi
+                    </p>
+                  </div>
+                </div> */}
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                     <svg
@@ -258,10 +288,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                   <div>
                     <h3 className="font-medium">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      San Francisco, CA
+                      Karachi, Pakistan &rarr; Dammam, Saudi Arabia
                     </p>
                   </div>
                 </div>
+
               </CardContent>
             </Card>
           </div>
