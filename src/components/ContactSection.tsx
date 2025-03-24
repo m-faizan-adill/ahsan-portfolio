@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import emailjs from 'emailjs-com';
 import {
   Form,
   FormControl,
@@ -43,7 +44,9 @@ interface ContactSectionProps {
   id?: string;
 }
 
-const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
+
+
+const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
@@ -58,11 +61,46 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
     },
   });
 
+  // const onSubmit = async (data: FormValues) => {
+  //   setIsSubmitting(true);
+
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setIsSuccess(true);
+  //     toast({
+  //       title: "Message sent!",
+  //       description: "Thank you for your message. I will get back to you soon.",
+  //       variant: "default",
+  //     });
+
+  //     // Reset form after 2 seconds
+  //     setTimeout(() => {
+  //       form.reset();
+  //       setIsSuccess(false);
+  //     }, 2000);
+  //   }, 1500);
+  // };
+
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    // EmailJS API call
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );
+      console.log('Email sent successfully:', result);
+
+      // If successful, update state
       setIsSubmitting(false);
       setIsSuccess(true);
       toast({
@@ -76,7 +114,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
         form.reset();
         setIsSuccess(false);
       }, 2000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Something went wrong.",
+        description: "There was an issue sending your message. Please try again later.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    }
   };
 
   return (
