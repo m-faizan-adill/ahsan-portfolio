@@ -16,6 +16,7 @@ interface AboutSectionProps {
     degree: string;
     institution: string;
     year: string;
+    cgpa?: string;
   }[];
 }
 
@@ -25,30 +26,57 @@ const AboutSection = ({
   description = "I am a passionate developer with over 5 years of experience building web applications using modern technologies. My focus is on creating clean, efficient, and user-friendly solutions that solve real-world problems.",
   experience = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
+      title: "Backend Developer",
+      company: "Improdata I Karachi, Pakistan",
+      period: "Nov 2024 - Present",
       description:
-        "Lead the development of responsive web applications using React, TypeScript, and Tailwind CSS. Collaborated with design and backend teams to implement new features and improve user experience.",
+        "Managed deployment of backend services to AWS EC2 instances for enhanced control over server environments, ensuring high availability and scalability. Implemented real-time communication using WebSockets and configured load balancers to improve performance.",
     },
     {
-      title: "Web Developer",
-      company: "Digital Solutions LLC",
-      period: "2018 - 2021",
+      title: "Full-stack Developer",
+      company: "Improdata I Karachi, Pakistan",
+      period: "Aug 2024 - Oct 2024",
       description:
-        "Developed and maintained client websites and web applications. Implemented responsive designs and ensured cross-browser compatibility.",
+        "Built scalable backend services with TypeScript, Express, MySQL, and PostgreSQL. Deployed backend services on AWS and Azure for efficient hosting. Developed Python data scraping scripts and integrated with Node.js.",
+    },
+    {
+      title: "Backend Developer (Apprenticeship)",
+      company: "Improdata I Karachi, Pakistan",
+      period: "May 2024 - July 2024",
+      description:
+        "Designed and developed RESTful APIs using TypeScript and Express. Managed MySQL databases on Azure and worked on backend development with Node.js and TypeScript.",
+    },
+    {
+      title: "Frontend Web Developer (Internship)",
+      company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+      period: "Sep 2023 - Nov 2023",
+      description:
+        "Developed a data analytics product using React.js and API integrations. Led the deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styled using Material-UI.",
+    },
+    {
+      title: "Android Application Developer (Internship)",
+      company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+      period: "July 2022 - Nov 2022",
+      description:
+        "Developed a driving application using Kotlin and XML, focusing on user-friendly navigation and ride management features. Optimized the app and contributed to feature implementation.",
     },
   ],
   education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      year: "2018",
+      degree: "Bachelor of Science in Computer Science (BSCS)",
+      institution: "Iqra University, Karachi, Pakistan",
+      year: "2020-2025",
+      cgpa: "3.32/4.00",
     },
     {
-      degree: "Bachelor of Science in Web Development",
-      institution: "State University",
-      year: "2016",
+      degree: "Pre engineering",
+      institution: "Dehli College, Karachi, Pakistan",
+      year: "2018-2020",
+    },
+    {
+      degree: "Computer Science",
+      institution: "ACE School, Karachi, Pakistan",
+      year: "2016-2018",
     },
   ],
 }: AboutSectionProps) => {
@@ -112,6 +140,7 @@ const AboutSection = ({
                       </span>
                     </div>
                     <p className="text-gray-600">{edu.institution}</p>
+                    {edu.cgpa && <p className="text-gray-700">CGPA: {edu.cgpa}</p>}
                   </CardContent>
                 </Card>
               ))}

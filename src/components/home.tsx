@@ -156,7 +156,7 @@ const Home: React.FC = () => {
 
       <Footer
         name="Muhammad Ahsan Adil"
-        email="contact@ahsanadil.com" // Updated your email
+        email="muhammadmahsanadil@gmail.com"
         socialLinks={{
           github: "https://github.com/ahsanadil9",
           linkedin: "https://www.linkedin.com/in/muhammad-ahsan-adil-a97a1a246/",
