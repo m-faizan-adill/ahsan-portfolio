@@ -18,6 +18,11 @@ interface AboutSectionProps {
     year: string;
     cgpa?: string;
   }[];
+  interests?: {
+    fieldsOfInterest: string[];
+    learningTools: string[];
+    activelyLearning: string[];
+  };
 }
 
 const AboutSection = ({
@@ -79,6 +84,24 @@ const AboutSection = ({
       year: "2016-2018",
     },
   ],
+  interests = {
+    fieldsOfInterest: [
+      "DevOps",
+      "Data Science",
+      "Data Engineering",
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Web Development",
+    ],
+    learningTools: [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD pipelines",
+      "Machine Learning frameworks",
+    ],
+    activelyLearning: ["Docker", "CI/CD"],
+  },
 }: AboutSectionProps) => {
   return (
     <section id="about" className="py-20 bg-slate-50 w-full">
@@ -148,31 +171,44 @@ const AboutSection = ({
 
             <div className="mt-12">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                Personal Interests
+                Interests & Learning
               </h3>
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
+                <h4 className="text-lg font-medium text-gray-800 mb-4">
+                    Fields of Interest:
+                  </h4>
                   <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">
-                        Open source contribution
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">
-                        Hiking and outdoor activities
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">Photography</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">Reading tech blogs</span>
-                    </li>
+                    {interests.fieldsOfInterest.map((field, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {field}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h4 className="text-lg font-medium text-gray-800 mt-6 mb-4">
+                    Learning Tools:
+                  </h4>
+                  <ul className="space-y-2">
+                    {interests.learningTools.map((tool, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h4 className="text-lg font-medium text-gray-800 mt-6 mb-4">
+                    Actively Learning:
+                  </h4>
+                  <ul className="space-y-2">
+                    {interests.activelyLearning.map((learning, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {learning}
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
