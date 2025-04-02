@@ -28,54 +28,54 @@ interface AboutSectionProps {
 const AboutSection = ({
   title = "About Me",
   subtitle = "Professional Background",
-  description = "I am a passionate developer with over 5 years of experience building web applications using modern technologies. My focus is on creating clean, efficient, and user-friendly solutions that solve real-world problems.",
+  description = "My journey began during my university years, where I built projects and learned from seniors, constantly improving my skills in writing clean and scalable code. As I gained expertise in various technologies, I took every opportunity to apply what I had learned professionally. I’ve always focused on creating clean, maintainable, and scalable codebases, ensuring my solutions solve real-world problems efficiently and effectively.",
   experience = [
     {
       title: "Backend Developer",
       company: "Improdata I Karachi, Pakistan",
-      period: "Nov 2024 - Present",
+      period: "May 2024 - Present (1 year)",
       description:
-        "Managed deployment of backend services to AWS EC2 instances for enhanced control over server environments, ensuring high availability and scalability. Implemented real-time communication using WebSockets and configured load balancers to improve performance.",
+        "At Improdata, I have worked across various roles as a Backend and Full-stack Developer, progressively gaining expertise in developing scalable and efficient applications. From May to July 2024, during my apprenticeship, I developed RESTful APIs and API endpoints using TypeScript and Express while managing MySQL databases on Azure. In my role as a Full-stack Developer (August to October 2024), I worked on backend services with TypeScript, Express, PostgreSQL, and deployed applications on AWS and Azure. I also developed Python data scraping scripts, maintained Django projects, and built a web app using React and Next.js. Additionally, I developed high-performance mobile applications for both iOS and Android using React Native. In my current role as a Backend Developer (since November 2024), I focus on building clean, maintainable, and scalable code with TypeScript, primarily working with the Express framework and PostgreSQL. I design and develop RESTful APIs, create API endpoints, implement authentication and authorization, and ensure data validation and sanitization. I have also worked extensively with WebSockets for real-time communication, developed caching strategies, and optimized application performance using load balancing on AWS. Additionally, I integrated Stripe payment gateways, ensuring secure and seamless transactions within the platform.",
     },
-    {
-      title: "Full-stack Developer",
-      company: "Improdata I Karachi, Pakistan",
-      period: "Aug 2024 - Oct 2024",
-      description:
-        "Built scalable backend services with TypeScript, Express, MySQL, and PostgreSQL. Deployed backend services on AWS and Azure for efficient hosting. Developed Python data scraping scripts and integrated with Node.js.",
-    },
-    {
-      title: "Backend Developer (Apprenticeship)",
-      company: "Improdata I Karachi, Pakistan",
-      period: "May 2024 - July 2024",
-      description:
-        "Designed and developed RESTful APIs using TypeScript and Express. Managed MySQL databases on Azure and worked on backend development with Node.js and TypeScript.",
-    },
-    {
-      title: "Frontend Web Developer (Internship)",
-      company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
-      period: "Sep 2023 - Nov 2023",
-      description:
-        "Developed a data analytics product using React.js and API integrations. Led the deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styled using Material-UI.",
-    },
-    {
-      title: "Android Application Developer (Internship)",
-      company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
-      period: "July 2022 - Nov 2022",
-      description:
-        "Developed a driving application using Kotlin and XML, focusing on user-friendly navigation and ride management features. Optimized the app and contributed to feature implementation.",
-    },
+    // {
+    //   title: "Full-stack Developer",
+    //   company: "Improdata I Karachi, Pakistan",
+    //   period: "Aug 2024 - Oct 2024",
+    //   description:
+    //     "Built scalable backend services with TypeScript, Express, MySQL, and PostgreSQL. Deployed backend services on AWS and Azure for efficient hosting. Developed Python data scraping scripts and integrated with Node.js.",
+    // },
+    // {
+    //   title: "Backend Developer (Apprenticeship)",
+    //   company: "Improdata I Karachi, Pakistan",
+    //   period: "May 2024 - July 2024",
+    //   description:
+    //     "Designed and developed RESTful APIs using TypeScript and Express. Managed MySQL databases on Azure and worked on backend development with Node.js and TypeScript.",
+    // },
+    // {
+    //   title: "Frontend Web Developer (Internship)",
+    //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+    //   period: "Sep 2023 - Nov 2023",
+    //   description:
+    //     "Developed a data analytics product using React.js and API integrations. Led the deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styled using Material-UI.",
+    // },
+    // {
+    //   title: "Android Application Developer (Internship)",
+    //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+    //   period: "July 2022 - Nov 2022",
+    //   description:
+    //     "Developed a driving application using Kotlin and XML, focusing on user-friendly navigation and ride management features. Optimized the app and contributed to feature implementation.",
+    // },
   ],
   education = [
     {
       degree: "Bachelor of Science in Computer Science (BSCS)",
       institution: "Iqra University, Karachi, Pakistan",
-      year: "2020-2025",
+      year: "2020-2024",
       cgpa: "3.32/4.00",
     },
     {
       degree: "Pre engineering",
-      institution: "Dehli College, Karachi, Pakistan",
+      institution: "Government Dehli College, Karachi, Pakistan",
       year: "2018-2020",
     },
     {
@@ -163,13 +163,15 @@ const AboutSection = ({
                       </span>
                     </div>
                     <p className="text-gray-600">{edu.institution}</p>
-                    {edu.cgpa && <p className="text-gray-700">CGPA: {edu.cgpa}</p>}
+                    {edu.cgpa && (
+                      <p className="text-gray-700">CGPA: {edu.cgpa}</p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="mt-12">
+            {/* <div className="mt-12">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">
                 Interests & Learning
               </h3>
@@ -212,7 +214,7 @@ const AboutSection = ({
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

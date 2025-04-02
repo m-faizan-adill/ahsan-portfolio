@@ -131,7 +131,7 @@ const Home: React.FC = () => {
         <HeroSection
           name="Ahsan Adil"
           title="Full Stack Developer"
-          introduction="I build modern web applications and APIs with a focus on performance, specializing in backend development. I craft industrial-grade code that balances complexity management with optimal performance, following the high standards of senior developers at major organizations."
+          introduction="I am a passionate developer with over 4 years of experience building modern web applications and APIs with a focus on performance, specializing in backend development. I write industrial-grade code that balances complexity management with optimal performance, adhering to high standards."
           ctaText="View My Work"
           onCtaClick={() => handleNavigation("projects")}
           profileImage="/pictures/ahsan.jpg" 
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
       </div>
 
       <Footer
-        name="Muhammad Ahsan Adil"
+        name="Ahsan Adil"
         email="muhammadmahsanadil@gmail.com"
         socialLinks={{
           github: "https://github.com/ahsanadil9",

@@ -31,8 +31,11 @@ const Footer = ({
           <div>
             <h3 className="text-xl font-bold mb-4">About Me</h3>
             <p className="text-slate-300">
-              I'm a passionate developer focused on creating beautiful,
-              functional web experiences with modern technologies.
+              I'm a passionate developer focused on creating seamless web
+              experiences and robust backend systems using modern technologies.
+              I specialize in building scalable applications, designing
+              efficient APIs, and optimizing performance to deliver
+              high-quality, functional solutions.
             </p>
           </div>
 

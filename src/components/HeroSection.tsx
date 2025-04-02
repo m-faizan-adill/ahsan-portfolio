@@ -11,7 +11,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  name = "John Doe",
+  name = "Ahsan Adil",
   title = "Full Stack Developer",
   introduction = "I build modern, responsive web applications with a focus on user experience and performance. Passionate about creating clean, maintainable code that solves real-world problems.",
   ctaText = "View My Work",
@@ -35,12 +35,12 @@ const HeroSection = ({
       </div>
 
       {/* Floating tech icons - visible on larger screens */}
-      <div className="hidden lg:block absolute left-16 top-1/3 text-blue-400 opacity-70 animate-float">
+      <div className="hidden lg:block absolute left-[34rem] top-[28.5%] text-purple-500 opacity-70 animate-float">
         <Code size={48} />
       </div>
-      <div className="hidden lg:block absolute right-24 top-1/4 text-purple-400 opacity-70 animate-float-delayed">
+      {/* <div className="hidden lg:block absolute right-24 top-1/4 text-purple-400 opacity-70 animate-float-delayed">
         <Database size={48} />
-      </div>
+      </div> */}
       <div className="hidden lg:block absolute right-48 bottom-1/3 text-blue-500 opacity-70 animate-float">
         <Server size={48} />
       </div>
