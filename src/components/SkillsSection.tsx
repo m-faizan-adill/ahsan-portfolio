@@ -53,6 +53,7 @@ const SkillsSection = ({
       name: "Tools & Others",
       skills: [
         { name: "Github", proficiency: 95 },
+        { name: "Github Actions", proficiency: 75 },
         { name: "Postman", proficiency: 95 },
         { name: "Git", proficiency: 90 },
         { name: "AWS", proficiency: 75 },

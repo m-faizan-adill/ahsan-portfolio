@@ -34,8 +34,8 @@ const AboutSection = ({
       title: "Backend Developer",
       company: "Improdata I Karachi, Pakistan",
       period: "May 2024 - Present (1 year)",
-      description:
-        "At Improdata, I have worked across various roles as a Backend and Full-stack Developer, progressively gaining expertise in developing scalable and efficient applications. From May to July 2024, during my apprenticeship, I developed RESTful APIs and API endpoints using TypeScript and Express while managing MySQL databases on Azure. In my role as a Full-stack Developer (August to October 2024), I worked on backend services with TypeScript, Express, PostgreSQL, and deployed applications on AWS and Azure. I also developed Python data scraping scripts, maintained Django projects, and built a web app using React and Next.js. Additionally, I developed high-performance mobile applications for both iOS and Android using React Native. In my current role as a Backend Developer (since November 2024), I focus on building clean, maintainable, and scalable code with TypeScript, primarily working with the Express framework and PostgreSQL. I design and develop RESTful APIs, create API endpoints, implement authentication and authorization, and ensure data validation and sanitization. I have also worked extensively with WebSockets for real-time communication, developed caching strategies, and optimized application performance using load balancing on AWS. Additionally, I integrated Stripe payment gateways, ensuring secure and seamless transactions within the platform.",
+      description: "At Improdata, I have gained extensive experience in various roles as both a Backend and Full-stack Developer, with a strong focus on building scalable and efficient applications. During my apprenticeship, I developed RESTful APIs and API endpoints using TypeScript and Express, while managing MySQL databases on Azure. \n As a Full-stack Developer, I contributed to backend services with TypeScript, Express, and PostgreSQL, and deployed applications on both AWS and Azure. I also developed Python-based data scraping scripts, maintained Django projects, and created a web application using React and Next.js. Additionally, I built high-performance mobile applications for iOS and Android with React Native. In my current role as a Backend Developer since November, I focus on writing clean, maintainable, and scalable code with TypeScript, primarily using the Express framework and PostgreSQL. My responsibilities include designing and developing RESTful APIs, creating secure API endpoints, and implementing robust authentication and authorization mechanisms. I also ensure thorough data validation and sanitization. \n I have significant experience working with WebSockets for real-time communication, developing caching strategies, and optimizing application performance through load balancing on AWS. Furthermore, I have successfully integrated Stripe payment gateways, ensuring secure and seamless transactions on the platform."
+        
     },
     // {
     //   title: "Full-stack Developer",
@@ -100,7 +100,7 @@ const AboutSection = ({
       "CI/CD pipelines",
       "Machine Learning frameworks",
     ],
-    activelyLearning: ["Docker", "CI/CD"],
+    activelyLearning: ["Docker", "CI/CD","Github Actions"],
   },
 }: AboutSectionProps) => {
   return (
@@ -171,13 +171,14 @@ const AboutSection = ({
               ))}
             </div>
 
-            {/* <div className="mt-12">
+            <div className="mt-12">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">
                 Interests & Learning
               </h3>
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
-                <h4 className="text-lg font-medium text-gray-800 mb-4">
+
+                {/* <h4 className="text-lg font-medium text-gray-800 mb-4">
                     Fields of Interest:
                   </h4>
                   <ul className="space-y-2">
@@ -199,9 +200,9 @@ const AboutSection = ({
                         {tool}
                       </li>
                     ))}
-                  </ul>
+                  </ul>*/}
 
-                  <h4 className="text-lg font-medium text-gray-800 mt-6 mb-4">
+                  <h4 className="text-lg font-medium text-gray-800 mt-0 mb-4">
                     Actively Learning:
                   </h4>
                   <ul className="space-y-2">
@@ -214,7 +215,7 @@ const AboutSection = ({
                   </ul>
                 </CardContent>
               </Card>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>

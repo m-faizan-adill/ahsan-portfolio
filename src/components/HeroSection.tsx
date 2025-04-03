@@ -35,7 +35,7 @@ const HeroSection = ({
       </div>
 
       {/* Floating tech icons - visible on larger screens */}
-      <div className="hidden lg:block absolute left-[34rem] top-[28.5%] text-purple-500 opacity-70 animate-float">
+      <div className="hidden lg:block absolute left-[34rem] top-[27%] text-purple-500 opacity-70 animate-float">
         <Code size={48} />
       </div>
       {/* <div className="hidden lg:block absolute right-24 top-1/4 text-purple-400 opacity-70 animate-float-delayed">
@@ -46,7 +46,7 @@ const HeroSection = ({
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-1">
           {/* Text content */}
           <div className="w-full lg:w-7/12  text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
@@ -74,7 +74,7 @@ const HeroSection = ({
           </div>
 
           {/* Profile image with cool effects - responsive across screen sizes */}
-          <div className="w-full lg:w-5/12 flex justify-center lg:justify-end mb-8 lg:mb-0">
+          <div className="w-full lg:w-5/12 flex justify-center lg:justify-end mb-8 lg:mb-5 mt-5 lg:mb-0">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64">
               {/* Background glow effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-md animate-pulse"></div>

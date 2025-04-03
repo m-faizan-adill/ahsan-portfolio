@@ -19,7 +19,7 @@ const Footer = ({
   socialLinks = {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    // twitter: "https://twitter.com",
   },
   copyrightYear = new Date().getFullYear(),
 }: FooterProps) => {
@@ -111,7 +111,7 @@ const Footer = ({
                   <Linkedin size={20} />
                 </a>
               )}
-              {socialLinks.twitter && (
+              {/* {socialLinks.twitter && (
                 <a
                   href={socialLinks.twitter}
                   target="_blank"
@@ -120,7 +120,7 @@ const Footer = ({
                 >
                   <Twitter size={20} />
                 </a>
-              )}
+              )} */}
               <a
                 href={`mailto:${email}`}
                 className="text-slate-300 hover:text-white transition-colors"

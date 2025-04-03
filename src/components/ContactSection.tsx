@@ -212,7 +212,7 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                           <circle cx="4" cy="4" r="2"></circle>
                         </svg>
                       </a>
-                      <a
+                      {/* <a
                         href="https://twitter.com/mahsanadil76401"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
@@ -229,7 +229,7 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                         >
                           <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                         </svg>
-                      </a>
+                      </a> */}
                       <a
                         href="https://www.facebook.com/ahsanadil221/"
                         className="text-muted-foreground hover:text-primary transition-colors"
