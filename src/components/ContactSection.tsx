@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import emailjs from 'emailjs-com';
 import {
   Form,
   FormControl,
@@ -43,7 +44,9 @@ interface ContactSectionProps {
   id?: string;
 }
 
-const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
+
+
+const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
@@ -58,11 +61,46 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
     },
   });
 
+  // const onSubmit = async (data: FormValues) => {
+  //   setIsSubmitting(true);
+
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setIsSuccess(true);
+  //     toast({
+  //       title: "Message sent!",
+  //       description: "Thank you for your message. I will get back to you soon.",
+  //       variant: "default",
+  //     });
+
+  //     // Reset form after 2 seconds
+  //     setTimeout(() => {
+  //       form.reset();
+  //       setIsSuccess(false);
+  //     }, 2000);
+  //   }, 1500);
+  // };
+
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    // EmailJS API call
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );
+      console.log('Email sent successfully:', result);
+
+      // If successful, update state
       setIsSubmitting(false);
       setIsSuccess(true);
       toast({
@@ -76,7 +114,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
         form.reset();
         setIsSuccess(false);
       }, 2000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Something went wrong.",
+        description: "There was an issue sending your message. Please try again later.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,7 +168,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <p className="text-sm text-muted-foreground">
-                      contact@example.com
+                      muhammadmahsanadil@gmail.com
                     </p>
                   </div>
                 </div>
@@ -147,7 +193,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                     <h3 className="font-medium">Social Media</h3>
                     <div className="flex space-x-3 mt-1">
                       <a
-                        href="#"
+                        href="https://www.linkedin.com/in/muhammadahsanadil/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -166,8 +212,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                           <circle cx="4" cy="4" r="2"></circle>
                         </svg>
                       </a>
-                      <a
-                        href="#"
+                      {/* <a
+                        href="https://twitter.com/mahsanadil76401"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -183,9 +229,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                         >
                           <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                         </svg>
-                      </a>
+                      </a> */}
                       <a
-                        href="#"
+                        href="https://www.facebook.com/ahsanadil221/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -203,7 +249,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                         </svg>
                       </a>
                       <a
-                        href="#"
+                        href="https://www.instagram.com/ahsan_adil9/"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         <svg
@@ -258,10 +304,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id = "contact" }) => {
                   <div>
                     <h3 className="font-medium">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      San Francisco, CA
+                      Karachi, Pakistan &rarr; Dammam, Saudi Arabia
                     </p>
                   </div>
                 </div>
+
               </CardContent>
             </Card>
           </div>

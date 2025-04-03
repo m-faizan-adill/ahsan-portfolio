@@ -16,41 +16,92 @@ interface AboutSectionProps {
     degree: string;
     institution: string;
     year: string;
+    cgpa?: string;
   }[];
+  interests?: {
+    fieldsOfInterest: string[];
+    learningTools: string[];
+    activelyLearning: string[];
+  };
 }
 
 const AboutSection = ({
   title = "About Me",
   subtitle = "Professional Background",
-  description = "I am a passionate developer with over 5 years of experience building web applications using modern technologies. My focus is on creating clean, efficient, and user-friendly solutions that solve real-world problems.",
+  description = "My journey began during my university years, where I built projects and learned from seniors, constantly improving my skills in writing clean and scalable code. As I gained expertise in various technologies, I took every opportunity to apply what I had learned professionally. I’ve always focused on creating clean, maintainable, and scalable codebases, ensuring my solutions solve real-world problems efficiently and effectively.",
   experience = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description:
-        "Lead the development of responsive web applications using React, TypeScript, and Tailwind CSS. Collaborated with design and backend teams to implement new features and improve user experience.",
+      title: "Backend Developer",
+      company: "Improdata I Karachi, Pakistan",
+      period: "May 2024 - Present (1 year)",
+      description: "At Improdata, I have gained extensive experience in various roles as both a Backend and Full-stack Developer, with a strong focus on building scalable and efficient applications. During my apprenticeship, I developed RESTful APIs and API endpoints using TypeScript and Express, while managing MySQL databases on Azure. \n As a Full-stack Developer, I contributed to backend services with TypeScript, Express, and PostgreSQL, and deployed applications on both AWS and Azure. I also developed Python-based data scraping scripts, maintained Django projects, and created a web application using React and Next.js. Additionally, I built high-performance mobile applications for iOS and Android with React Native. In my current role as a Backend Developer since November, I focus on writing clean, maintainable, and scalable code with TypeScript, primarily using the Express framework and PostgreSQL. My responsibilities include designing and developing RESTful APIs, creating secure API endpoints, and implementing robust authentication and authorization mechanisms. I also ensure thorough data validation and sanitization. \n I have significant experience working with WebSockets for real-time communication, developing caching strategies, and optimizing application performance through load balancing on AWS. Furthermore, I have successfully integrated Stripe payment gateways, ensuring secure and seamless transactions on the platform."
+        
     },
-    {
-      title: "Web Developer",
-      company: "Digital Solutions LLC",
-      period: "2018 - 2021",
-      description:
-        "Developed and maintained client websites and web applications. Implemented responsive designs and ensured cross-browser compatibility.",
-    },
+    // {
+    //   title: "Full-stack Developer",
+    //   company: "Improdata I Karachi, Pakistan",
+    //   period: "Aug 2024 - Oct 2024",
+    //   description:
+    //     "Built scalable backend services with TypeScript, Express, MySQL, and PostgreSQL. Deployed backend services on AWS and Azure for efficient hosting. Developed Python data scraping scripts and integrated with Node.js.",
+    // },
+    // {
+    //   title: "Backend Developer (Apprenticeship)",
+    //   company: "Improdata I Karachi, Pakistan",
+    //   period: "May 2024 - July 2024",
+    //   description:
+    //     "Designed and developed RESTful APIs using TypeScript and Express. Managed MySQL databases on Azure and worked on backend development with Node.js and TypeScript.",
+    // },
+    // {
+    //   title: "Frontend Web Developer (Internship)",
+    //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+    //   period: "Sep 2023 - Nov 2023",
+    //   description:
+    //     "Developed a data analytics product using React.js and API integrations. Led the deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styled using Material-UI.",
+    // },
+    // {
+    //   title: "Android Application Developer (Internship)",
+    //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
+    //   period: "July 2022 - Nov 2022",
+    //   description:
+    //     "Developed a driving application using Kotlin and XML, focusing on user-friendly navigation and ride management features. Optimized the app and contributed to feature implementation.",
+    // },
   ],
   education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      year: "2018",
+      degree: "Bachelor of Science in Computer Science (BSCS)",
+      institution: "Iqra University, Karachi, Pakistan",
+      year: "2020-2024",
+      cgpa: "3.32/4.00",
     },
     {
-      degree: "Bachelor of Science in Web Development",
-      institution: "State University",
-      year: "2016",
+      degree: "Pre engineering",
+      institution: "Government Dehli College, Karachi, Pakistan",
+      year: "2018-2020",
+    },
+    {
+      degree: "Computer Science",
+      institution: "ACE School, Karachi, Pakistan",
+      year: "2016-2018",
     },
   ],
+  interests = {
+    fieldsOfInterest: [
+      "DevOps",
+      "Data Science",
+      "Data Engineering",
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Web Development",
+    ],
+    learningTools: [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD pipelines",
+      "Machine Learning frameworks",
+    ],
+    activelyLearning: ["Docker", "CI/CD","Github Actions"],
+  },
 }: AboutSectionProps) => {
   return (
     <section id="about" className="py-20 bg-slate-50 w-full">
@@ -112,6 +163,9 @@ const AboutSection = ({
                       </span>
                     </div>
                     <p className="text-gray-600">{edu.institution}</p>
+                    {edu.cgpa && (
+                      <p className="text-gray-700">CGPA: {edu.cgpa}</p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -119,35 +173,49 @@ const AboutSection = ({
 
             <div className="mt-12">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                Personal Interests
+                Interests & Learning
               </h3>
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
+
+                {/* <h4 className="text-lg font-medium text-gray-800 mb-4">
+                    Fields of Interest:
+                  </h4>
                   <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">
-                        Open source contribution
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">
-                        Hiking and outdoor activities
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">Photography</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                      <span className="text-gray-700">Reading tech blogs</span>
-                    </li>
+                    {interests.fieldsOfInterest.map((field, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {field}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h4 className="text-lg font-medium text-gray-800 mt-6 mb-4">
+                    Learning Tools:
+                  </h4>
+                  <ul className="space-y-2">
+                    {interests.learningTools.map((tool, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>*/}
+
+                  <h4 className="text-lg font-medium text-gray-800 mt-0 mb-4">
+                    Actively Learning:
+                  </h4>
+                  <ul className="space-y-2">
+                    {interests.activelyLearning.map((learning, index) => (
+                      <li key={index} className="text-gray-700">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
+                        {learning}
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
