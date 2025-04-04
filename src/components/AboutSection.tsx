@@ -35,11 +35,11 @@ const AboutSection = ({
       company: "Improdata I Karachi, Pakistan",
       period: "May 2024 - Present (1 year)",
       description: "At Improdata, I have gained extensive experience in various roles as both a Backend and Full-stack Developer, with a strong focus on building scalable and efficient applications. During my apprenticeship, I developed RESTful APIs and API endpoints using TypeScript and Express, while managing MySQL databases on Azure. \n As a Full-stack Developer, I contributed to backend services with TypeScript, Express, and PostgreSQL, and deployed applications on both AWS and Azure. I also developed Python-based data scraping scripts, maintained Django projects, and created a web application using React and Next.js. Additionally, I built high-performance mobile applications for iOS and Android with React Native. In my current role as a Backend Developer since November, I focus on writing clean, maintainable, and scalable code with TypeScript, primarily using the Express framework and PostgreSQL. My responsibilities include designing and developing RESTful APIs, creating secure API endpoints, and implementing robust authentication and authorization mechanisms. I also ensure thorough data validation and sanitization. \n I have significant experience working with WebSockets for real-time communication, developing caching strategies, and optimizing application performance through load balancing on AWS. Furthermore, I have successfully integrated Stripe payment gateways, ensuring secure and seamless transactions on the platform."
-        
+
     },
     // {
     //   title: "Full-stack Developer",
-    //   company: "Improdata I Karachi, Pakistan",
+    //   company: "PAKSOFT GLOBAL (PVT) LIMITED, Karachi, Pakistan",
     //   period: "Aug 2024 - Oct 2024",
     //   description:
     //     "Built scalable backend services with TypeScript, Express, MySQL, and PostgreSQL. Deployed backend services on AWS and Azure for efficient hosting. Developed Python data scraping scripts and integrated with Node.js.",
@@ -51,13 +51,13 @@ const AboutSection = ({
     //   description:
     //     "Designed and developed RESTful APIs using TypeScript and Express. Managed MySQL databases on Azure and worked on backend development with Node.js and TypeScript.",
     // },
-    // {
-    //   title: "Frontend Web Developer (Internship)",
-    //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
-    //   period: "Sep 2023 - Nov 2023",
-    //   description:
-    //     "Developed a data analytics product using React.js and API integrations. Led the deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styled using Material-UI.",
-    // },
+    {
+      title: "Frontend & Android Application Developer",
+      company: "PAKSOFT GLOBAL (PVT) LIMITED I Karachi, Pakistan",
+      period: "July 2022 - Nov 2023",
+      description:
+        "Developed a driving application using Kotlin and XML, focusing on user-friendly navigation and ride management features. Optimized the app and contributed to feature implementation. Additionally, developed a data analytics product using React.js and API integrations, leading deployment and testing to ensure functionality. Worked on multiple screens, state management using Redux, and styling with Material-UI.",
+    },
     // {
     //   title: "Android Application Developer (Internship)",
     //   company: "Innovative Solutions Technologies Inc I Karachi, Pakistan",
@@ -100,7 +100,7 @@ const AboutSection = ({
       "CI/CD pipelines",
       "Machine Learning frameworks",
     ],
-    activelyLearning: ["Docker", "CI/CD","Github Actions"],
+    activelyLearning: ["Docker", "CI/CD", "Github Actions"],
   },
 }: AboutSectionProps) => {
   return (
@@ -178,7 +178,7 @@ const AboutSection = ({
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
 
-                {/* <h4 className="text-lg font-medium text-gray-800 mb-4">
+                  {/* <h4 className="text-lg font-medium text-gray-800 mb-4">
                     Fields of Interest:
                   </h4>
                   <ul className="space-y-2">
@@ -215,7 +215,7 @@ const AboutSection = ({
                   </ul>
                 </CardContent>
               </Card>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
