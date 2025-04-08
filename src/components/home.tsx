@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { FC, useRef } from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
@@ -8,7 +8,7 @@ import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 import CertificateSection from "./CertificateSection";
 
-const Home: React.FC = () => {
+const Home: FC = () => {
   // Create refs for each section for smooth scrolling
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
