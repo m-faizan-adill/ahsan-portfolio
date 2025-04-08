@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { ThemeToggle } from "./ui/toggle-theme-button";
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
@@ -73,6 +74,9 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
           >
             Contact
           </button>
+
+          {/* Theme Toggle Button */}
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -94,7 +98,8 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-white shadow-lg fixed top-10 left-0 right-0 z-40 max-h-[70vh] overflow-y-auto">
+
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <button
               onClick={() => handleNavigation("home")}
@@ -139,6 +144,8 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
               <span>Contact</span>
               <ChevronRight className="h-4 w-4" />
             </button>
+
+            <ThemeToggle />
           </div>
         </div>
       )}
