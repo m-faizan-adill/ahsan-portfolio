@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Play, Youtube } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -18,6 +18,7 @@ interface ProjectCardProps {
   technologies: string[];
   demoUrl: string;
   githubUrl: string;
+  youtubeUrl?: string;
 }
 
 const ProjectCard = ({
@@ -27,6 +28,7 @@ const ProjectCard = ({
   technologies = ["React", "TypeScript", "Tailwind CSS"],
   demoUrl = "#",
   githubUrl = "#",
+  youtubeUrl = "#",
 }: ProjectCardProps) => {
   return (
     <Card className="overflow-hidden h-full flex flex-col bg-white">
@@ -36,6 +38,19 @@ const ProjectCard = ({
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
+        {youtubeUrl && (
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            aria-label={`Watch ${title} video`}
+          >
+            <div className="bg-red-600 rounded-full p-3 shadow-lg transform transition-transform group-hover:scale-110">
+              <Play fill="white" size={24} className="text-white ml-1" />
+            </div>
+          </a>
+        )}
       </div>
       <CardHeader className="pb-2">
         <CardTitle className="text-xl font-bold">{title}</CardTitle>
@@ -75,6 +90,20 @@ const ProjectCard = ({
             Code
           </a>
         </Button>
+
+        {youtubeUrl && (
+          <Button variant="outline" size="sm" className="bg-red-50 hover:bg-red-100 text-red-600 border-red-200" asChild>
+            <a
+              href={youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1"
+            >
+              <Youtube size={16} />
+              Watch Video
+            </a>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );
