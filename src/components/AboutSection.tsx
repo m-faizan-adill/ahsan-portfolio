@@ -177,31 +177,6 @@ const AboutSection = ({
               </h3>
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
-
-                  {/* <h4 className="text-lg font-medium text-gray-800 mb-4">
-                    Fields of Interest:
-                  </h4>
-                  <ul className="space-y-2">
-                    {interests.fieldsOfInterest.map((field, index) => (
-                      <li key={index} className="text-gray-700">
-                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
-                        {field}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <h4 className="text-lg font-medium text-gray-800 mt-6 mb-4">
-                    Learning Tools:
-                  </h4>
-                  <ul className="space-y-2">
-                    {interests.learningTools.map((tool, index) => (
-                      <li key={index} className="text-gray-700">
-                        <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
-                        {tool}
-                      </li>
-                    ))}
-                  </ul>*/}
-
                   <h4 className="text-lg font-medium text-gray-800 mt-0 mb-4">
                     Actively Learning:
                   </h4>
