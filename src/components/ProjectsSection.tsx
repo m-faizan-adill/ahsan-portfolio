@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
@@ -134,7 +133,7 @@ const ProjectsSection = ({
     },
   ],
 }: ProjectsSectionProps) => {
-  console.table(projects);
+  // console.table(projects);
 
   const containerVariants = {
     hidden: { opacity: 0 },
