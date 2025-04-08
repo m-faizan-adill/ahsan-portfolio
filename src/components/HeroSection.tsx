@@ -74,7 +74,7 @@ const HeroSection = ({
           </div>
 
           {/* Profile image with cool effects - responsive across screen sizes */}
-          <div className="w-full lg:w-5/12 flex justify-center lg:justify-end mb-8 lg:mb-5 mt-5 lg:mb-0">
+          <div className="w-full lg:w-5/12 flex justify-center lg:justify-end mb-8 lg:mb-5 mt-5">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64">
               {/* Background glow effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-md animate-pulse"></div>

@@ -6,7 +6,7 @@ interface HeaderProps {
   onNavigate?: (section: string) => void;
 }
 
-const Header = ({ onNavigate = () => {} }: HeaderProps) => {
+const Header = ({ onNavigate = () => { } }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,11 +55,18 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
             Projects
           </button>
           <button
+            onClick={() => handleNavigation("certificate")}
+            className="text-gray-700 hover:text-primary transition-colors"
+          >
+            Certificate
+          </button>
+          <button
             onClick={() => handleNavigation("skills")}
             className="text-gray-700 hover:text-primary transition-colors"
           >
             Skills
           </button>
+
           <button
             onClick={() => handleNavigation("contact")}
             className="text-gray-700 hover:text-primary transition-colors"
@@ -111,12 +118,20 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
               <ChevronRight className="h-4 w-4" />
             </button>
             <button
+              onClick={() => handleNavigation("certificate")}
+              className="flex justify-between items-center text-gray-700 hover:text-primary py-2 transition-colors"
+            >
+              <span>Certificate</span>
+              <ChevronRight className="h-4 w-4" />
+            </button>
+            <button
               onClick={() => handleNavigation("skills")}
               className="flex justify-between items-center text-gray-700 hover:text-primary py-2 transition-colors"
             >
               <span>Skills</span>
               <ChevronRight className="h-4 w-4" />
             </button>
+
             <button
               onClick={() => handleNavigation("contact")}
               className="flex justify-between items-center text-gray-700 hover:text-primary py-2 transition-colors"
