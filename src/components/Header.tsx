@@ -16,7 +16,7 @@ const NAV_ITEMS = [
   { id: "contact", label: "Contact" },
 ];
 
-const Header = ({ onNavigate = () => {} }: HeaderProps) => {
+const Header = ({ onNavigate = () => { } }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -74,11 +74,10 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
   }) => (
     <button
       onClick={() => handleNavigation(id)}
-      className={`${
-        isMobile
+      className={`${isMobile
           ? "flex justify-between items-center py-2 w-full"
           : ""
-      } text-gray-700 hover:text-primary transition-colors`}
+        } text-gray-700 hover:text-primary transition-colors`}
     >
       <span>{label}</span>
       {isMobile && <ChevronRight className="h-4 w-4" />}
@@ -88,14 +87,13 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white ${
-        isScrolled ? "shadow-md py-2" : "py-4"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-md py-2" : "py-4"
+        }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <h1 className="text-xl font-bold text-primary">Portfolio</h1>
+          <h1 className="text-xl font-bold text-primary dark:text-green-500">Portfolio</h1>
         </div>
 
         {/* Desktop Navigation */}
@@ -116,6 +114,7 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
             size="icon"
             onClick={toggleMenu}
             aria-label="Toggle menu"
+            className="dark:text-green-500"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -128,7 +127,7 @@ const Header = ({ onNavigate = () => {} }: HeaderProps) => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div 
+        <div
           className="md:hidden bg-white shadow-lg fixed left-0 right-0 z-40 max-h-[70vh] overflow-y-auto"
           style={{ top: `${headerHeight}px` }}
         >
