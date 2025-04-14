@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 import { Progress } from "./ui/progress";
 import { Separator } from "./ui/separator";
 
@@ -10,7 +10,7 @@ interface SkillCategory {
 interface Skill {
   name: string;
   proficiency: number;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 interface SkillsSectionProps {
