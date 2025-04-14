@@ -1,5 +1,4 @@
-import React from "react";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Youtube } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 interface FooterProps {
@@ -9,6 +8,7 @@ interface FooterProps {
     github?: string;
     linkedin?: string;
     twitter?: string;
+    youtube?: string;
   };
   copyrightYear?: number;
 }
@@ -19,6 +19,7 @@ const Footer = ({
   socialLinks = {
     github: "https://github.com",
     linkedin: "https://linkedin.com",
+    youtube: 'https://www.youtube.com/@AhsanAdilVlog/shorts',
     // twitter: "https://twitter.com",
   },
   copyrightYear = new Date().getFullYear(),
@@ -121,6 +122,16 @@ const Footer = ({
                   <Twitter size={20} />
                 </a>
               )} */}
+              {socialLinks.youtube && (
+                <a
+                  href={socialLinks.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  <Youtube size={20} />
+                </a>
+              )}
               <a
                 href={`mailto:${email}`}
                 className="text-slate-300 hover:text-white transition-colors"
