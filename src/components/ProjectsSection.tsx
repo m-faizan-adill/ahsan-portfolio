@@ -9,7 +9,7 @@ interface Project {
   technologies: string[];
   demoUrl: string;
   githubUrl: string;
-  youtubeUrl: string
+  // youtubeUrl: string
 }
 
 interface ProjectsSectionProps {
@@ -32,7 +32,7 @@ const ProjectsSection = ({
       technologies: ["Node.js", "MongoDB", "Express JS"],
       demoUrl: "#",
       githubUrl: "https://github.com/ahsanadil9/CaliforniaPizza-Clone-Backend",
-      youtubeUrl: "https://www.youtube.com/watch?v=hxMNYkLN7tI",
+      // youtubeUrl: "https://www.youtube.com/watch?v=hxMNYkLN7tI",
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const ProjectsSection = ({
       technologies: ["React", "Next JS", "CSS", "Tailwind CSS"],
       demoUrl: "https://california-pizza-clone.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/CaliforniaPizza-Clone",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const ProjectsSection = ({
       technologies: ["React", "Next JS", "CSS", "Tailwind CSS"],
       demoUrl: "https://california-clone-admin-panel.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/CaliforniaPizza-Clone-Admin",
-      youtubeUrl:"https://www.youtube.com/watch?v=8HnGpDTozTk"
+      // youtubeUrl:"https://www.youtube.com/watch?v=8HnGpDTozTk"
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ const ProjectsSection = ({
       technologies: ["React", "CSS", "MUI"],
       demoUrl: "http://reactleaflet-chart.surge.sh/",
       githubUrl: "https://github.com/ahsanadil9/LeafletandChart",
-      youtubeUrl:"https://www.youtube.com/watch?v=KgmeL_xuB0I"
+      // youtubeUrl:"https://www.youtube.com/watch?v=KgmeL_xuB0I"
     },
     {
       id: 5,
@@ -80,7 +80,7 @@ const ProjectsSection = ({
       technologies: ["React", "Bootstrap", "CSS"],
       demoUrl: "https://the-todo-list-webapp.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/Todo-List",
-      youtubeUrl:"https://www.youtube.com/watch?v=8F8ZG-m_Uw4"
+      // youtubeUrl:"https://www.youtube.com/watch?v=8F8ZG-m_Uw4"
     },
     {
       id: 6,
@@ -92,7 +92,7 @@ const ProjectsSection = ({
       technologies: ["React", "CSS"],
       demoUrl: "https://a-tic-tac-toe-game.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/Game-Tic-Tac-Toe",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
     {
       id: 7,
@@ -104,7 +104,7 @@ const ProjectsSection = ({
       technologies: ["HTML", "CSS", "JS"],
       demoUrl: "https://www.iugpacalculator.live/",
       githubUrl: "https://github.com/ahsanadil9/GPACalculator",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
     {
       id: 8,
@@ -116,7 +116,7 @@ const ProjectsSection = ({
       technologies: ["HTML", "CSS", "JS"],
       demoUrl: "https://t-shirt-price-calculator.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/T-shirt-Price-Calculator",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
     {
       id: 9,
@@ -128,7 +128,7 @@ const ProjectsSection = ({
       technologies: ["HTML", "CSS", "JS"],
       demoUrl: "https://blog-post-page.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/Blog-Post-Page",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
     {
       id: 10,
@@ -140,7 +140,7 @@ const ProjectsSection = ({
       technologies: ["HTML", "CSS", "JS"],
       demoUrl: "https://ps-4-dual-shock-controller-product-page.vercel.app/",
       githubUrl: "https://github.com/ahsanadil9/PS4-DualShock-Controller-Product-Page",
-      youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
+      // youtubeUrl:"https://www.youtube.com/watch?v=zG1CLCBNhpo"
     },
   ],
 }: ProjectsSectionProps) => {
@@ -207,7 +207,7 @@ const ProjectsSection = ({
                 technologies={project.technologies}
                 demoUrl={project.demoUrl}
                 githubUrl={project.githubUrl}
-                youtubeUrl={project.youtubeUrl}
+              // youtubeUrl={project.youtubeUrl}
               />
             </motion.div>
           ))}
