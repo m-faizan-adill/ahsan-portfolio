@@ -93,9 +93,9 @@ const certificates: Certificate[] = [
 const categories = [
     { value: "all", label: "All Certificates" },
     { value: "development", label: "Development" },
-    { value: "design", label: "Design" },
+    // { value: "design", label: "Design" },
     // { value: "cloud", label: "Cloud" },
-    { value: "database", label: "Database" },
+    // { value: "database", label: "Database" },
     // { value: "devops", label: "DevOps" },
     { value: "management", label: "Management" },
 ];
