@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import { FC, useRef } from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
@@ -70,7 +70,7 @@ const Home: FC = () => {
       <div ref={certificateRef}>
         <CertificateSection />
       </div>
-      
+
       <div ref={skillsRef}>
         <SkillsSection />
       </div>
@@ -87,6 +87,7 @@ const Home: FC = () => {
           github: "https://github.com/ahsanadil9",
           linkedin: "https://www.linkedin.com/in/muhammad-ahsan-adil-a97a1a246/",
           twitter: "https://twitter.com/mahsanadil76401",
+          youtube: 'https://www.youtube.com/@AhsanAdilVlog/shorts',
         }}
       />
     </div>
