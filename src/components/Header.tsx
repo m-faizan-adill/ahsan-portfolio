@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ui/toggle-theme-button";
 
@@ -84,6 +84,20 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
     </button>
   );
 
+  const handleResumeDownload = () => {
+    // Replace with your actual resume file path
+    const resumeUrl = '/resume.pdf';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'resume.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <header
       ref={headerRef}
@@ -101,6 +115,17 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
           {NAV_ITEMS.map(item => (
             <NavButton key={item.id} id={item.id} label={item.label} />
           ))}
+
+          {/* Resume Download Button */}
+          <Button
+            onClick={handleResumeDownload}
+            variant="outline"
+            className="ml-2 flex items-center gap-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+          >
+            <Download className="h-4 w-4" />
+            <span>Resume</span>
+          </Button>
+
 
           {/* Theme Toggle Button */}
           <ThemeToggle />
@@ -140,6 +165,19 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
                 isMobile
               />
             ))}
+
+
+            {/* Mobile Resume Download Button */}
+            <div className="pt-2 border-t border-gray-200">
+              <Button
+                onClick={handleResumeDownload}
+                variant="outline"
+                className="w-full flex items-center justify-center gap-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+              >
+                <Download className="h-4 w-4" />
+                <span>Download Resume</span>
+              </Button>
+            </div>
           </div>
         </div>
       )}
