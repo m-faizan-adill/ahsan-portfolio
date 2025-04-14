@@ -86,7 +86,7 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
 
   const handleResumeDownload = () => {
     // Replace with your actual resume file path
-    const resumeUrl = '/resume.pdf';
+    const resumeUrl = '/resume.pdf'
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'resume.pdf';
