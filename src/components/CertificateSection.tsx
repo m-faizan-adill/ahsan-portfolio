@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
-import { PDFViewer } from "./ui/pdf-viewer";
-import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface Certificate {
     id: string;
@@ -22,7 +20,7 @@ const certificates: Certificate[] = [
         issuer: "Udemy",
         date: "Oct. 1 ,2024",
         category: "development",
-        imagePath: "/certificates/complete java examples.pdf",
+        imagePath: "/certificates/complete java.jpg",
     },
     {
         id: "cert2",
@@ -30,7 +28,7 @@ const certificates: Certificate[] = [
         issuer: "Udemy",
         date: "Oct 2, 2021",
         category: "development",
-        imagePath: "/certificates/es6 cert.pdf",
+        imagePath: "/certificates/es6.jpg",
     },
     {
         id: "cert3",
@@ -115,9 +113,7 @@ const CertificateSection = () => {
     };
 
     const displayCertificate = (cert: Certificate) => {
-        if (cert.imagePath.endsWith('.pdf')) {
-            return <PDFViewer url={cert.imagePath} />;
-        } else {
+        if (cert.imagePath) {
             return (
                 <img
                     src={cert.imagePath}
@@ -126,6 +122,7 @@ const CertificateSection = () => {
                 />
             );
         }
+        return null;
     };
 
     return (
