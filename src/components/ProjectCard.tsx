@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -28,7 +27,7 @@ const ProjectCard = ({
   technologies = ["React", "TypeScript", "Tailwind CSS"],
   demoUrl = "#",
   githubUrl = "#",
-  youtubeUrl = "#",
+  // youtubeUrl = "#",
 }: ProjectCardProps) => {
   return (
     <Card className="overflow-hidden h-full flex flex-col bg-white">
@@ -38,9 +37,9 @@ const ProjectCard = ({
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
-        {youtubeUrl && (
+        {demoUrl && (
           <a
-            href={youtubeUrl}
+            href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -67,7 +66,7 @@ const ProjectCard = ({
           {description}
         </CardDescription>
       </CardContent>
-      <CardFooter className="flex justify-between pt-2 border-t">
+      <CardFooter className="flex justify-start pt-2 space-x-3 border-t">
         <Button variant="outline" size="sm" asChild>
           <a
             href={demoUrl}
@@ -90,11 +89,11 @@ const ProjectCard = ({
             Code
           </a>
         </Button>
-
-        {youtubeUrl && (
+{/* 
+        {demoUrl && (
           <Button variant="outline" size="sm" className="bg-red-50 hover:bg-red-100 text-red-600 border-red-200" asChild>
             <a
-              href={youtubeUrl}
+              href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1"
@@ -103,7 +102,7 @@ const ProjectCard = ({
               Watch Video
             </a>
           </Button>
-        )}
+        )} */}
       </CardFooter>
     </Card>
   );
