@@ -1,6 +1,4 @@
-import React from "react";
 import { Card, CardContent } from "./ui/card";
-import { Separator } from "./ui/separator";
 
 interface AboutSectionProps {
   title?: string;
