@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ui/toggle-theme-button";
@@ -75,8 +75,8 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
     <button
       onClick={() => handleNavigation(id)}
       className={`${isMobile
-          ? "flex justify-between items-center py-2 w-full"
-          : ""
+        ? "flex justify-between items-center py-2 w-full"
+        : ""
         } text-gray-700 hover:text-primary transition-colors`}
     >
       <span>{label}</span>
