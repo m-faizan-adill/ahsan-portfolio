@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,7 +9,6 @@ import emailjs from 'emailjs-com';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,7 +18,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
@@ -60,27 +58,6 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
       message: "",
     },
   });
-
-  // const onSubmit = async (data: FormValues) => {
-  //   setIsSubmitting(true);
-
-  //   // Simulate API call
-  //   setTimeout(() => {
-  //     setIsSubmitting(false);
-  //     setIsSuccess(true);
-  //     toast({
-  //       title: "Message sent!",
-  //       description: "Thank you for your message. I will get back to you soon.",
-  //       variant: "default",
-  //     });
-
-  //     // Reset form after 2 seconds
-  //     setTimeout(() => {
-  //       form.reset();
-  //       setIsSuccess(false);
-  //     }, 2000);
-  //   }, 1500);
-  // };
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
@@ -191,10 +168,12 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                   </div>
                   <div>
                     <h3 className="font-medium">Social Media</h3>
-                    <div className="flex space-x-3 mt-1">
+                    <div className="flex items-center space-x-3 mt-1">
                       <a
                         href="https://www.linkedin.com/in/muhammadahsanadil/"
                         className="text-muted-foreground hover:text-primary transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +194,9 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                       {/* <a
                         href="https://twitter.com/mahsanadil76401"
                         className="text-muted-foreground hover:text-primary transition-colors"
-                      >
+                        target="_blank"
+                         rel="noopener noreferrer"
+                        >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
@@ -251,6 +232,8 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                       <a
                         href="https://www.instagram.com/ahsan_adil9/"
                         className="text-muted-foreground hover:text-primary transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -273,6 +256,28 @@ const ContactSection: FC<ContactSectionProps> = ({ id = "contact" }) => {
                           ></rect>
                           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                      </a>
+
+                      <a
+                        href="https://www.youtube.com/@AhsanAdilVlog/shorts"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="23"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                         </svg>
                       </a>
                     </div>

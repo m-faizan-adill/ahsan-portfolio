@@ -91,7 +91,7 @@ const Footer = ({
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="text-slate-300 mb-2">{email}</p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex items-center space-x-4 mt-4">
               {socialLinks.github && (
                 <a
                   href={socialLinks.github}
@@ -129,7 +129,7 @@ const Footer = ({
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  <Youtube size={20} />
+                  <Youtube size={23} />
                 </a>
               )}
               <a
