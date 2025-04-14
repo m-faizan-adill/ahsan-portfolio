@@ -38,14 +38,14 @@ const certificates: Certificate[] = [
         category: "development",
         imagePath: "/certificates/html and css3 certificate by kushal.jpg",
     },
-    // {
-    //     id: "cert4",
-    //     title: "HTML5 and CSS3 Build: Two Responsive Websites in Hindi || Urdu",
-    //     issuer: "Udemy",
-    //     date: "July 2, 2021",
-    //     category: "development",
-    //     imagePath: "/certificates/html and css3 kushal certificate.pdf",
-    // },
+    {
+        id: "cert4",
+        title: "HTML/CSS",
+        issuer: "TESTDOME",
+        date: "May 1, 2023",
+        category: "development",
+        imagePath: "/certificates/html_css.png",
+    },
     {
         id: "cert5",
         title: "Introduction to Web Development [HTML, CSS, JAVASCRIPT]",
@@ -54,14 +54,14 @@ const certificates: Certificate[] = [
         category: "development",
         imagePath: "/certificates/intro to html,css and js cert.jpg",
     },
-    // {
-    //     id: "cert6",
-    //     title: "Introduction to Web Development [HTML, CSS, JAVASCRIPT]",
-    //     issuer: "Udemy",
-    //     date: "July 18, 2021",
-    //     category: "development",
-    //     imagePath: "/certificates/intro to java,css, html cert.pdf",
-    // },
+    {
+        id: "cert6",
+        title: "NODE.JS",
+        issuer: "TESTDOME",
+        date: "May 21, 2024",
+        category: "development",
+        imagePath: "/certificates/nodeJS.png",
+    },
     {
         id: "cert7",
         title: "Python for beginners - Learn all the basics of python",
@@ -70,14 +70,14 @@ const certificates: Certificate[] = [
         category: "development",
         imagePath: "/certificates/python for beginners.jpg",
     },
-    // {
-    //     id: "cert8",
-    //     title: "Python for beginners - Learn all the basics of python",
-    //     issuer: "Udemy",
-    //     date: "July 13, 2021",
-    //     category: "development",
-    //     imagePath: "/certificates/python for beginners.pdf",
-    // },
+    {
+        id: "cert8",
+        title: "React",
+        issuer: "TESTDOME",
+        date: "May 21, 2023",
+        category: "development",
+        imagePath: "/certificates/react.png",
+    },
     {
         id: "cert9",
         title: "Freelancing: 37 Ways to Make Money From Home as a Freelancer",
@@ -85,6 +85,14 @@ const certificates: Certificate[] = [
         date: "June 26, 2021",
         category: "management",
         imagePath: "/certificates/UC-4bd20f4d-a952-4b37-a28d-9fbbeaf72fc7.jpg",
+    },
+    {
+        id: "cert10",
+        title: "SQL",
+        issuer: "TESTDOME",
+        date: "May 21, 2023",
+        category: "development",
+        imagePath: "/certificates/sql.png",
     },
 ];
 
