@@ -48,7 +48,7 @@ const HeroSection = ({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-1">
           {/* Text content */}
-          <div className="w-full lg:w-7/12  text-center lg:text-left">
+          <div className="w-full lg:w-7/12 mt-5 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
               Hi, I'm{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">

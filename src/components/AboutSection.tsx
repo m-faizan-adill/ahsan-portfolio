@@ -126,15 +126,15 @@ const AboutSection = ({
                 >
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-medium text-gray-900">
+                      <h4 className="text-xl font-medium text-gray-900 dark:text-gray-300">
                         {job.title}
                       </h4>
-                      <span className="text-sm font-medium text-gray-500">
+                      <span className="text-sm font-medium text-gray-500 dark:text-gray-500 whitespace-nowrap">
                         {job.period}
                       </span>
                     </div>
-                    <p className="text-gray-600 mb-4">{job.company}</p>
-                    <p className="text-gray-700">{job.description}</p>
+                    <p className="text-gray-600 mb-4 dark:text-gray-500">{job.company}</p>
+                    <p className="text-gray-700 dark:text-gray-500">{job.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -153,16 +153,16 @@ const AboutSection = ({
                 >
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-medium text-gray-900">
+                      <h4 className="text-xl font-medium text-gray-900 dark:text-gray-300">
                         {edu.degree}
                       </h4>
-                      <span className="text-sm font-medium text-gray-500">
+                      <span className="text-sm font-medium text-gray-500 dark:text-500 whitespace-nowrap">
                         {edu.year}
                       </span>
                     </div>
-                    <p className="text-gray-600">{edu.institution}</p>
+                    <p className="text-gray-600 dark:text-gray-500">{edu.institution}</p>
                     {edu.cgpa && (
-                      <p className="text-gray-700">CGPA: {edu.cgpa}</p>
+                      <p className="text-gray-700 dark:text-gray-500">CGPA: {edu.cgpa}</p>
                     )}
                   </CardContent>
                 </Card>
@@ -175,12 +175,12 @@ const AboutSection = ({
               </h3>
               <Card className="overflow-hidden border-none shadow-md">
                 <CardContent className="p-6">
-                  <h4 className="text-lg font-medium text-gray-800 mt-0 mb-4">
+                  <h4 className="text-lg font-medium text-gray-800 mt-0 mb-4 dark:text-gray-300">
                     Actively Learning:
                   </h4>
                   <ul className="space-y-2">
                     {interests.activelyLearning.map((learning, index) => (
-                      <li key={index} className="text-gray-700">
+                      <li key={index} className="text-gray-700 dark:text-gray-500">
                         <div className="w-2 h-2 rounded-full bg-blue-500 mr-3 inline-block"></div>
                         {learning}
                       </li>

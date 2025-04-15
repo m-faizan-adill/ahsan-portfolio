@@ -76,7 +76,7 @@ const Header = ({ onNavigate = () => { } }: HeaderProps) => {
       onClick={() => handleNavigation(id)}
       className={`${isMobile
         ? "flex justify-between items-center py-2 w-full"
-        : ""
+        : "focus-within:underline hover:underline"
         } text-gray-700 hover:text-primary transition-colors`}
     >
       <span>{label}</span>
