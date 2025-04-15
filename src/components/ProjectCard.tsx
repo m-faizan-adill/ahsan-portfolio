@@ -52,7 +52,7 @@ const ProjectCard = ({
         )}
       </div>
       <CardHeader className="pb-2">
-        <CardTitle className="text-xl font-bold dark:black">{title}</CardTitle>
+        <CardTitle className="text-xl font-bold dark:text-gray-500">{title}</CardTitle>
         <div className="flex flex-wrap gap-1 mt-2">
           {technologies.map((tech, index) => (
             <Badge key={index} variant="secondary" className="text-xs">
