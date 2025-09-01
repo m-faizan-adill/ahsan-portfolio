@@ -3,7 +3,6 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-
 import { TempoDevtools } from "tempo-devtools";
 import { ThemeProvider } from "./components/providers/ThemeProvider.tsx";
 TempoDevtools.init();
